@@ -48,39 +48,136 @@
 </header>
 
 <div class="clave">
-  <strong>En una frase:</strong> KRATOS PLAYER es un reproductor. No tenemos cuentas de usuario, no
-  recogemos datos, no usamos analítica ni publicidad, y no recibimos tus credenciales.
-  Todo lo que la aplicación guarda se queda <strong>dentro de tu televisor</strong>.
+  <strong>En una frase:</strong> KRATOS PLAYER es un reproductor y no trae contenido. No hay cuentas de
+  usuario, ni analítica, ni publicidad, ni SDK de terceros, y nunca enviamos a ningún sitio qué
+  ves. Lo que sí sale del televisor hacia nuestro servidor es el <strong>identificador del propio
+  aparato</strong> (y sus datos técnicos), porque la licencia de la aplicación va atada al televisor.
+  Esta página explica exactamente qué se envía, para qué y cuánto se guarda.
 </div>
 
 <h2>1. Quién es responsable</h2>
 <p>
-  El editor de la aplicación KRATOS PLAYER (en adelante, «nosotros»). Para cualquier asunto
-  relacionado con esta política puedes escribir a
+  KRATOS TV, editor de la aplicación KRATOS PLAYER (en adelante, «nosotros»). Para cualquier asunto
+  relacionado con esta política, incluido el borrado de tus datos, escribe a
   <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>.
 </p>
 
-<h2>2. Qué NO hacemos</h2>
-<ul>
-  <li>No creamos cuentas de usuario ni tenemos servidores donde guardar tus datos.</li>
-  <li>No recogemos ni recibimos tus credenciales: nunca pasan por ningún sistema nuestro.</li>
-  <li>No usamos analítica, telemetría, cookies de seguimiento, identificadores de publicidad ni SDK de terceros.</li>
-  <li>No mostramos publicidad.</li>
-  <li>No vendemos ni compartimos información personal con nadie.</li>
-  <li>No proveemos canales, listas, suscripciones ni contenido: el contenido lo aportas tú con tu propio servicio.</li>
-</ul>
-
-<h2>3. Qué guarda la aplicación y dónde</h2>
+<h2>2. Qué envía la aplicación a nuestro servidor</h2>
 <p>
-  Para poder funcionar, la aplicación guarda lo siguiente en el almacenamiento local de
-  tu televisor (el equivalente a los datos de la app). <strong>No sale del aparato.</strong>
+  La aplicación se comunica con nuestro servidor (<code>kratostv.com</code>) para <strong>gestionar la
+  licencia de ese televisor</strong>. En cada arranque, y mientras comprueba si la licencia sigue
+  vigente, envía:
 </p>
 <ul>
-  <li><strong>Datos de conexión a tu servicio</strong>: la dirección del servidor y el usuario y
-      contraseña que tú introduces, o la URL de tu lista. Se guardan para no pedírtelos en cada arranque.</li>
-  <li><strong>Favoritos</strong> y <strong>progreso de reproducción</strong> (por dónde ibas en una película o episodio).</li>
+  <li>el <strong>identificador del televisor</strong> (DUID), que es el número único que el propio aparato
+      le da a la aplicación;</li>
+  <li>las <strong>direcciones MAC</strong> de wifi y de cable del televisor;</li>
+  <li>el <strong>modelo</strong> y la <strong>versión de firmware</strong> del televisor;</li>
+  <li>la <strong>versión de la aplicación</strong>.</li>
+</ul>
+<p>
+  Nuestro servidor, al recibir esa petición, anota además la <strong>dirección IP</strong> desde la que
+  llega, la <strong>fecha y hora</strong> de la conexión y un <strong>contador de arranques</strong>.
+</p>
+<p>
+  Se envía lo mismo en los otros tres momentos en que la aplicación habla con nosotros: al
+  <strong>canjear un código de activación</strong> (que va además del código), al <strong>pedir el contacto de
+  soporte</strong> que se muestra como código QR, y al <strong>preguntar si hay una lista preparada</strong> para
+  ese televisor.
+</p>
+<div class="clave">
+  <strong>Y nada más.</strong> La aplicación <strong>no</strong> nos envía qué canal ves, qué película o
+  episodio pones, cuánto tiempo lo ves, qué buscas ni qué marcas como favorito. Nada de eso llega a
+  nuestro servidor: se queda dentro de tu televisor (punto 7).
+</div>
+
+<h2>3. Para qué lo usamos, y con qué base legal (RGPD)</h2>
+<p>
+  El DUID, las direcciones MAC y la dirección IP son <strong>identificadores de aparato</strong>, y como tales
+  se tratan como datos personales. Los usamos para dos cosas y para nada más:
+</p>
+<ul>
+  <li><strong>Prestar el servicio que has contratado</strong> — reconocer tu televisor, saber si su licencia
+      está activa o caducada, aplicar el código de activación que canjeas y entregarle, si procede, la
+      lista que tú o tu proveedor le hayáis preparado. Base legal: <strong>ejecución del contrato</strong>
+      (art. 6.1.b RGPD).</li>
+  <li><strong>Evitar el fraude</strong> — la licencia se vende por televisor, así que va atada al aparato
+      para que una misma licencia no se use en muchos televisores a la vez. Es también la razón de que
+      un televisor reinstalado vuelva a ser reconocido. Base legal: <strong>interés legítimo</strong>
+      (art. 6.1.f RGPD).</li>
+</ul>
+<p>
+  No hacemos elaboración de perfiles, ni decisiones automatizadas con efectos jurídicos sobre ti, ni
+  publicidad de ningún tipo.
+</p>
+
+<h2>4. Qué guardamos en nuestro servidor</h2>
+<p>Una <strong>ficha por televisor</strong>, con:</p>
+<ul>
+  <li>una <strong>clave de 8 caracteres</strong> que identifica el aparato y que se muestra en su pantalla;</li>
+  <li>el <strong>DUID</strong>, las <strong>dos direcciones MAC</strong>, el <strong>modelo</strong>, el
+      <strong>firmware</strong> y la <strong>versión de la aplicación</strong>;</li>
+  <li>el <strong>estado de la licencia</strong> (en prueba, activa o bloqueada) y su <strong>fecha de
+      caducidad</strong>;</li>
+  <li>la <strong>fecha de alta</strong>, la de la <strong>última conexión</strong>, el <strong>número de
+      arranques</strong> y la <strong>dirección IP</strong> de la última conexión;</li>
+  <li>qué <strong>revendedor</strong> es responsable de ese televisor, y una nota que ese revendedor puede
+      escribir para identificarlo (por ejemplo «salón de Juan»).</li>
+</ul>
+<p>
+  Y un <strong>historial</strong> de lo que le ha pasado a ese televisor (alta, activación con un código,
+  renovación, bloqueo), con la fecha y la dirección IP de cada apunte.
+</p>
+<p>
+  <strong>Los datos de conexión de tu servicio, solo si los cargáis en el panel.</strong> Si tú o tu
+  proveedor cargáis una lista en nuestro panel para que le llegue sola al televisor, guardamos los datos
+  de conexión de ese servicio (la dirección del servidor y el usuario y la contraseña, o la URL de la
+  lista y de la guía) y el nombre que le hayáis puesto. <strong>Si no usas ese camino y escribes tus datos
+  directamente en el televisor, esos datos NO pasan por nosotros</strong>: se quedan en el aparato
+  (punto 7).
+</p>
+
+<h2>5. Quién puede ver esos datos</h2>
+<ul>
+  <li><strong>Nosotros</strong>, como editor de la aplicación.</li>
+  <li><strong>El revendedor que te vendió la licencia</strong>, que ve la ficha de tu televisor en su panel
+      para poder darte soporte, activarte y renovarte.</li>
+  <li><strong>Nuestro proveedor de alojamiento</strong> (Hostinger), que actúa como encargado del tratamiento
+      y solo trata los datos para mantener el servicio funcionando.</li>
+</ul>
+<p>
+  <strong>No vendemos, no alquilamos y no cedemos estos datos a nadie más</strong>, ni los usamos para
+  publicidad. Solo los entregaríamos a una autoridad si una ley nos obligara.
+</p>
+<p>
+  Nuestro servidor está fuera del Espacio Económico Europeo. La transferencia se ampara en las
+  cláusulas contractuales tipo de nuestro proveedor de alojamiento.
+</p>
+
+<h2>6. Cuánto tiempo los guardamos</h2>
+<ul>
+  <li>La <strong>ficha del televisor y su historial</strong>: mientras el televisor siga registrado, y como
+      máximo <strong>24 meses desde su última conexión</strong>.</li>
+  <li>Los <strong>datos de conexión de tu servicio</strong>: hasta que tú o tu proveedor los quitéis, y en
+      todo caso se borran con la ficha del televisor.</li>
+  <li><strong>Borrado a petición:</strong> escribe a <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a> indicando la
+      clave de 8 caracteres que sale en la pantalla de tu televisor, y borramos su ficha, su historial y
+      sus datos de conexión en un plazo máximo de <strong>30 días</strong>. Ten en cuenta que al borrarla el
+      televisor deja de estar reconocido y su licencia se pierde.</li>
+</ul>
+
+<h2>7. Qué guarda la aplicación dentro del televisor, y no sale de ahí</h2>
+<p>
+  Todo esto vive en el almacenamiento local de la aplicación, dentro de tu televisor.
+  <strong>Ni lo recibimos ni lo podemos leer</strong>, y el televisor lo borra al desinstalar la aplicación.
+</p>
+<ul>
+  <li><strong>Datos de conexión a tu servicio</strong>: la dirección del servidor y el usuario y la contraseña
+      que tú introduces, o la URL de tu lista. Se guardan para no pedírtelos en cada arranque.</li>
+  <li><strong>Favoritos</strong> y <strong>progreso de reproducción</strong> (por dónde ibas en una película o
+      episodio).</li>
   <li><strong>Ajustes</strong>: idioma, idioma preferido de audio y subtítulos, frecuencia de actualización
-      del catálogo y User-Agent del reproductor.</li>
+      del catálogo y forma en que el reproductor se identifica.</li>
   <li><strong>Perfiles</strong> que hayas creado, con su nombre.</li>
   <li><strong>PIN de control parental</strong>: se guarda transformado (una huella), nunca el PIN en claro,
       junto con la lista de categorías que hayas bloqueado.</li>
@@ -88,70 +185,81 @@
       descargarlos en cada pantalla. Caduca sola.</li>
 </ul>
 
-<h2>4. Qué sale de tu televisor</h2>
+<h2>8. Qué sale de tu televisor hacia tu proveedor de IPTV</h2>
 <p>
-  Únicamente las peticiones al <strong>servidor que tú configuras</strong>: la aplicación se conecta a él
-  para identificarte, descargar tu catálogo y reproducir. En esa conexión, tu proveedor recibe
-  tus credenciales, tu dirección IP y datos técnicos normales de cualquier conexión a Internet
-  (modelo de aparato, User-Agent).
+  Las peticiones al <strong>servidor que tú configuras</strong>: la aplicación se conecta a él para
+  identificarte, descargar tu catálogo y reproducir. En esa conexión, tu proveedor recibe tus
+  credenciales, tu dirección IP y datos técnicos normales de cualquier conexión a Internet (modelo de
+  aparato, identificación del reproductor).
 </p>
 <p>
-  Ese proveedor es un tercero que tú eliges y contratas por tu cuenta: <strong>el tratamiento que haga
-  de esos datos se rige por su propia política de privacidad, no por esta</strong>. Nosotros no
-  intervenimos en esa relación ni recibimos copia de nada.
-</p>
-
-<h2>5. Base legal (RGPD)</h2>
-<p>
-  No realizamos ningún tratamiento de datos personales por nuestra cuenta: no recibimos datos.
-  El almacenamiento local descrito en el punto 3 es <strong>estrictamente necesario</strong> para prestar
-  el servicio que solicitas al usar la aplicación (artículo 6.1.b RGPD) y lo controlas tú desde
-  el propio televisor.
+  Ese proveedor es un tercero que tú eliges y contratas por tu cuenta: <strong>el tratamiento que haga de
+  esos datos se rige por su propia política de privacidad, no por esta</strong>. Nosotros no intervenimos en
+  esa relación ni recibimos copia de nada de lo que pasa por ahí.
 </p>
 
-<h2>6. Tus derechos</h2>
+<h2>9. El contacto de soporte que se ve en el televisor</h2>
 <p>
-  Como los datos están en tu aparato, puedes ejercer tus derechos directamente y al instante:
+  En Ajustes, la aplicación muestra un código QR con el contacto de quien te da soporte. Ese dato lo
+  decide el panel: si tu licencia la vendió un revendedor y <strong>él ha autorizado</strong> que se publique
+  su contacto, se muestra el suyo; si no, se muestra el nuestro. Nunca se publica el teléfono
+  particular de nadie que no lo haya autorizado.
 </p>
+
+<h2>10. Tus derechos</h2>
 <ul>
-  <li><strong>Acceso y rectificación</strong>: en Ajustes puedes ver y cambiar tus datos de conexión, perfiles y preferencias.</li>
-  <li><strong>Supresión</strong>: «Cerrar sesión» borra tus datos de conexión; desinstalar la aplicación
-      borra <em>todo</em> lo que se describe en el punto 3.</li>
-  <li><strong>Oposición y limitación</strong>: dejar de usar la aplicación detiene por completo cualquier
-      tratamiento, porque no queda nada en ningún servidor nuestro.</li>
+  <li><strong>Acceso</strong>: puedes pedirnos copia de la ficha de tu televisor escribiendo a
+      <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a> con la clave de 8 caracteres de tu pantalla. También puedes
+      consultar el estado de tu televisor en <a href="https://kratostv.com/tv">kratostv.com/tv</a>.</li>
+  <li><strong>Rectificación</strong>: en Ajustes puedes ver y cambiar tus datos de conexión, perfiles y
+      preferencias; lo que esté en nuestro servidor lo corregimos a petición.</li>
+  <li><strong>Supresión</strong>: «Cerrar sesión» borra tus datos de conexión del televisor; desinstalar la
+      aplicación borra <em>todo</em> lo que se describe en el punto 7; y para lo que está en nuestro
+      servidor, el borrado a petición del punto 6.</li>
+  <li><strong>Oposición y limitación</strong>: puedes oponerte al tratamiento basado en nuestro interés
+      legítimo (punto 3); ten en cuenta que sin identificar el aparato no podemos darle licencia.</li>
+  <li><strong>Portabilidad</strong>: te entregamos en un fichero legible lo que tengamos de tu televisor.</li>
 </ul>
 <p>
-  Si necesitas ayuda o quieres reclamar, escribe a <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>.
-  También puedes reclamar ante la autoridad de protección de datos de tu país.
+  Si necesitas ayuda o quieres reclamar, escribe a <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>. También
+  puedes reclamar ante la autoridad de protección de datos de tu país.
 </p>
 
-<h2>7. Residentes de California (CCPA/CPRA)</h2>
+<h2>11. Residentes de California (CCPA/CPRA)</h2>
 <p>
-  No recogemos, vendemos ni compartimos información personal. En los últimos doce meses no hemos
-  vendido ni compartido información personal de ningún usuario, ni la hemos usado para publicidad
-  cruzada entre contextos.
+  Las categorías de información personal que recogemos son <strong>identificadores</strong> (identificador del
+  televisor, direcciones MAC, dirección IP) e <strong>información comercial</strong> (el estado y la caducidad
+  de tu licencia). Se recogen de tu propio televisor y se usan para los fines del punto 3.
 </p>
-
-<h2>8. Menores</h2>
 <p>
-  La aplicación no está dirigida a menores de 13 años y no recoge datos de ellos a sabiendas.
-  Incluye un PIN de control parental con el que puedes bloquear categorías.
+  <strong>No vendemos y no compartimos</strong> información personal, y no la hemos vendido ni compartido en
+  los últimos doce meses, ni la usamos para publicidad cruzada entre contextos. No recogemos categorías
+  sensibles. Para ejercer tus derechos de conocer, borrar o corregir, escribe a
+  <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>; no te trataremos distinto por ejercerlos.
 </p>
 
-<h2>9. Seguridad</h2>
+<h2>12. Menores</h2>
 <p>
-  Los datos se guardan en el almacenamiento privado de la aplicación dentro del televisor, al que
-  no acceden otras aplicaciones. El PIN parental se guarda transformado. Ten en cuenta que la
-  seguridad de la conexión con tu proveedor (que use HTTPS o no) depende de ese proveedor.
+  La aplicación no está dirigida a menores de 13 años y no recoge datos de ellos a sabiendas. Incluye un
+  PIN de control parental con el que puedes bloquear categorías.
 </p>
 
-<h2>10. Cambios en esta política</h2>
+<h2>13. Seguridad</h2>
 <p>
-  Si cambia, se publicará aquí con una nueva fecha de actualización. Los cambios relevantes se
-  anunciarán además dentro de la aplicación.
+  Todo lo que la aplicación envía a nuestro servidor va por <strong>HTTPS</strong>. Nuestra base de datos no
+  es accesible desde Internet y al panel solo se entra con usuario y contraseña. Dentro del televisor,
+  los datos viven en el almacenamiento privado de la aplicación, al que no acceden otras aplicaciones, y
+  el PIN parental se guarda transformado. Ten en cuenta que la seguridad de la conexión con tu proveedor
+  de IPTV (que use HTTPS o no) depende de ese proveedor.
 </p>
 
-<h2>11. Contacto</h2>
+<h2>14. Cambios en esta política</h2>
+<p>
+  Si cambia, se publicará aquí con una nueva fecha de actualización. Los cambios relevantes se anunciarán
+  además dentro de la aplicación.
+</p>
+
+<h2>15. Contacto</h2>
 <p><a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a></p>
 
 <!-- ------------------------------------------------------------------ -->
@@ -162,104 +270,211 @@
 <p class="fecha">Last updated: 12/9/2026</p>
 
 <div class="clave">
-  <strong>In one sentence:</strong> KRATOS PLAYER is a player. We have no user accounts, we collect no
-  data, we use no analytics or advertising, and we never receive your credentials. Everything the
-  app stores stays <strong>inside your TV</strong>.
+  <strong>In one sentence:</strong> KRATOS PLAYER is a media player and ships with no content. There are no
+  user accounts, no analytics, no advertising and no third-party SDKs, and we never send anywhere what
+  you watch. What does leave the TV towards our server is the <strong>device's own identifier</strong>
+  (and its technical details), because the application licence is tied to the TV set. This page explains
+  exactly what is sent, what for, and how long it is kept.
 </div>
 
 <h2>1. Who is responsible</h2>
 <p>
-  The publisher of the KRATOS PLAYER application («we»). For anything related to this policy, write to
-  <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>.
+  KRATOS TV, publisher of the KRATOS PLAYER application («we»). For anything related to this policy, including
+  deletion of your data, write to <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>.
 </p>
 
-<h2>2. What we do NOT do</h2>
+<h2>2. What the application sends to our server</h2>
+<p>
+  The application talks to our server (<code>kratostv.com</code>) in order to <strong>manage the licence of
+  that TV set</strong>. On every launch, and while it checks whether the licence is still valid, it sends:
+</p>
 <ul>
-  <li>We do not create user accounts and we run no servers that store your data.</li>
-  <li>We neither collect nor receive your credentials: they never pass through any system of ours.</li>
-  <li>We use no analytics, telemetry, tracking cookies, advertising identifiers or third-party SDKs.</li>
-  <li>We show no advertising.</li>
-  <li>We do not sell or share personal information with anyone.</li>
-  <li>We provide no channels, playlists, subscriptions or content: the content comes from your own service.</li>
+  <li>the <strong>TV identifier</strong> (DUID), the unique number the device itself gives to the
+      application;</li>
+  <li>the <strong>MAC addresses</strong> of the TV's Wi-Fi and Ethernet interfaces;</li>
+  <li>the TV <strong>model</strong> and <strong>firmware version</strong>;</li>
+  <li>the <strong>application version</strong>.</li>
+</ul>
+<p>
+  On receiving that request, our server also records the <strong>IP address</strong> it came from, the
+  <strong>date and time</strong> of the connection and a <strong>launch counter</strong>.
+</p>
+<p>
+  The same details are sent in the three other moments when the application talks to us: when
+  <strong>redeeming an activation code</strong> (together with the code), when <strong>requesting the support
+  contact</strong> shown as a QR code, and when <strong>asking whether a playlist has been prepared</strong> for
+  that TV.
+</p>
+<div class="clave">
+  <strong>And nothing else.</strong> The application does <strong>not</strong> send us which channel you watch,
+  which film or episode you play, how long you watch it, what you search for or what you mark as a
+  favourite. None of that reaches our server: it stays inside your TV (section 7).
+</div>
+
+<h2>3. What we use it for, and the legal basis (GDPR)</h2>
+<p>
+  The DUID, the MAC addresses and the IP address are <strong>device identifiers</strong> and are therefore
+  treated as personal data. We use them for two purposes and no others:
+</p>
+<ul>
+  <li><strong>To provide the service you paid for</strong> — recognising your TV, knowing whether its licence
+      is active or expired, applying the activation code you redeem and delivering, where applicable, the
+      playlist you or your provider prepared for it. Legal basis: <strong>performance of the contract</strong>
+      (Art. 6(1)(b) GDPR).</li>
+  <li><strong>To prevent fraud</strong> — the licence is sold per TV set, so it is tied to the device to stop
+      one licence being used on many TVs at once. This is also why a reinstalled TV is recognised again.
+      Legal basis: <strong>legitimate interest</strong> (Art. 6(1)(f) GDPR).</li>
+</ul>
+<p>
+  We do no profiling, no automated decision-making with legal effects on you, and no advertising of any
+  kind.
+</p>
+
+<h2>4. What we store on our server</h2>
+<p>One <strong>record per TV set</strong>, containing:</p>
+<ul>
+  <li>an <strong>8-character key</strong> that identifies the device and is shown on its screen;</li>
+  <li>the <strong>DUID</strong>, both <strong>MAC addresses</strong>, the <strong>model</strong>, the
+      <strong>firmware</strong> and the <strong>application version</strong>;</li>
+  <li>the <strong>licence state</strong> (trial, active or blocked) and its <strong>expiry date</strong>;</li>
+  <li>the <strong>registration date</strong>, the <strong>last connection</strong>, the <strong>number of
+      launches</strong> and the <strong>IP address</strong> of the last connection;</li>
+  <li>which <strong>reseller</strong> is responsible for that TV, plus a note that reseller may write to
+      identify it (for example «Juan's living room»).</li>
+</ul>
+<p>
+  And a <strong>history</strong> of what has happened to that TV (registration, activation with a code,
+  renewal, blocking), with the date and IP address of each entry.
+</p>
+<p>
+  <strong>Your service's connection details, only if they are loaded into the panel.</strong> If you or your
+  provider load a playlist into our panel so that it reaches the TV automatically, we store that
+  service's connection details (the server address plus the username and password, or the playlist and
+  guide URLs) and the name you gave it. <strong>If you do not use that route and type your details straight
+  into the TV, those details do NOT pass through us</strong>: they stay on the device (section 7).
+</p>
+
+<h2>5. Who can see that data</h2>
+<ul>
+  <li><strong>We</strong>, as the publisher of the application.</li>
+  <li><strong>The reseller who sold you the licence</strong>, who sees your TV's record in their panel in
+      order to support, activate and renew it.</li>
+  <li><strong>Our hosting provider</strong> (Hostinger), acting as a data processor and handling the data only
+      to keep the service running.</li>
+</ul>
+<p>
+  <strong>We do not sell, rent or disclose this data to anyone else</strong>, and we do not use it for
+  advertising. We would only hand it to an authority if required by law.
+</p>
+<p>
+  Our server is located outside the European Economic Area. The transfer relies on our hosting provider's
+  standard contractual clauses.
+</p>
+
+<h2>6. How long we keep it</h2>
+<ul>
+  <li>The <strong>TV record and its history</strong>: while the TV remains registered, and at most
+      <strong>24 months from its last connection</strong>.</li>
+  <li>Your <strong>service connection details</strong>: until you or your provider remove them, and in any
+      case they are deleted together with the TV record.</li>
+  <li><strong>Deletion on request:</strong> write to <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a> quoting the
+      8-character key shown on your TV screen, and we delete its record, its history and its connection
+      details within <strong>30 days</strong>. Note that deleting it means the TV is no longer recognised and
+      its licence is lost.</li>
 </ul>
 
-<h2>3. What the app stores, and where</h2>
+<h2>7. What the application stores inside the TV, and never sends out</h2>
 <p>
-  To work, the app stores the following in your TV's local application storage.
-  <strong>It never leaves the device.</strong>
+  All of this lives in the application's local storage inside your TV. <strong>We neither receive it nor can
+  we read it</strong>, and the TV deletes it when the application is uninstalled.
 </p>
 <ul>
   <li><strong>Your service connection details</strong>: the server address plus the username and password you
       enter, or your playlist URL, so you are not asked again on every start.</li>
-  <li><strong>Favorites</strong> and <strong>playback progress</strong>.</li>
-  <li><strong>Settings</strong>: language, preferred audio and subtitle language, catalog refresh interval and
-      player User-Agent.</li>
+  <li><strong>Favourites</strong> and <strong>playback progress</strong>.</li>
+  <li><strong>Settings</strong>: language, preferred audio and subtitle language, catalogue refresh interval
+      and how the player identifies itself.</li>
   <li><strong>Profiles</strong> you create, with their names.</li>
-  <li><strong>Parental PIN</strong>: stored as a one-way fingerprint, never in clear text, along with the list of
-      categories you locked.</li>
-  <li><strong>A temporary copy of the catalog and guide</strong> returned by your service, so it is not
+  <li><strong>Parental PIN</strong>: stored as a one-way fingerprint, never in clear text, along with the list
+      of categories you locked.</li>
+  <li><strong>A temporary copy of the catalogue and guide</strong> returned by your service, so it is not
       downloaded again on every screen. It expires on its own.</li>
 </ul>
 
-<h2>4. What leaves your TV</h2>
+<h2>8. What leaves your TV towards your IPTV provider</h2>
 <p>
-  Only the requests to the <strong>server you configure</strong>: the app connects to it to authenticate,
-  download your catalog and play. In that connection your provider receives your credentials, your
-  IP address and the usual technical data of any Internet connection (device model, User-Agent).
+  The requests to the <strong>server you configure</strong>: the application connects to it to authenticate,
+  download your catalogue and play. In that connection your provider receives your credentials, your IP
+  address and the usual technical data of any Internet connection (device model, player identification).
 </p>
 <p>
-  That provider is a third party you choose and pay separately: <strong>its handling of that data is
-  governed by its own privacy policy, not by this one</strong>. We take no part in that relationship and
-  receive no copy of anything.
-</p>
-
-<h2>5. Legal basis (GDPR)</h2>
-<p>
-  We carry out no processing of personal data of our own: we receive no data. The local storage
-  described in section 3 is <strong>strictly necessary</strong> to provide the service you request by using
-  the app (Article 6(1)(b) GDPR) and you control it from the TV itself.
+  That provider is a third party you choose and pay separately: <strong>its handling of that data is governed
+  by its own privacy policy, not by this one</strong>. We take no part in that relationship and receive no
+  copy of anything that goes through it.
 </p>
 
-<h2>6. Your rights</h2>
+<h2>9. The support contact shown on the TV</h2>
+<p>
+  In Settings, the application shows a QR code with the contact details of whoever supports you. The panel
+  decides which one: if your licence was sold by a reseller and <strong>that reseller has authorised</strong>
+  publishing their contact details, theirs is shown; otherwise ours is. Nobody's personal phone number is
+  ever published without their authorisation.
+</p>
+
+<h2>10. Your rights</h2>
 <ul>
-  <li><strong>Access and rectification</strong>: in Settings you can see and change your connection details,
-      profiles and preferences.</li>
-  <li><strong>Erasure</strong>: «Log out» deletes your connection details; uninstalling the app deletes
-      <em>everything</em> described in section 3.</li>
-  <li><strong>Objection and restriction</strong>: stopping use of the app stops any processing entirely, because
-      nothing remains on any server of ours.</li>
+  <li><strong>Access</strong>: you can ask us for a copy of your TV's record by writing to
+      <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a> with the 8-character key from your screen. You can also
+      check your TV's status at <a href="https://kratostv.com/tv">kratostv.com/tv</a>.</li>
+  <li><strong>Rectification</strong>: in Settings you can see and change your connection details, profiles and
+      preferences; whatever is on our server we correct on request.</li>
+  <li><strong>Erasure</strong>: «Log out» deletes your connection details from the TV; uninstalling the
+      application deletes <em>everything</em> described in section 7; and for what is on our server, the
+      deletion on request in section 6.</li>
+  <li><strong>Objection and restriction</strong>: you may object to the processing based on our legitimate
+      interest (section 3); note that without identifying the device we cannot license it.</li>
+  <li><strong>Portability</strong>: we will provide whatever we hold about your TV in a readable file.</li>
 </ul>
 <p>
-  For help or complaints, write to <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>. You may also lodge a
-  complaint with your national data protection authority.
+  For help or complaints, write to <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>. You may also lodge a complaint
+  with your national data protection authority.
 </p>
 
-<h2>7. California residents (CCPA/CPRA)</h2>
+<h2>11. California residents (CCPA/CPRA)</h2>
 <p>
-  We do not collect, sell or share personal information. In the past twelve months we have not sold
-  or shared any user's personal information, nor used it for cross-context behavioral advertising.
+  The categories of personal information we collect are <strong>identifiers</strong> (TV identifier, MAC
+  addresses, IP address) and <strong>commercial information</strong> (the state and expiry of your licence).
+  They are collected from your own TV and used for the purposes in section 3.
+</p>
+<p>
+  <strong>We do not sell and do not share</strong> personal information, we have not sold or shared it in the
+  past twelve months, and we do not use it for cross-context behavioural advertising. We collect no
+  sensitive categories. To exercise your rights to know, delete or correct, write to
+  <a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a>; we will not treat you differently for exercising them.
 </p>
 
-<h2>8. Children</h2>
+<h2>12. Children</h2>
 <p>
-  The app is not directed to children under 13 and does not knowingly collect data from them. It
+  The application is not directed to children under 13 and does not knowingly collect data from them. It
   includes a parental PIN to lock categories.
 </p>
 
-<h2>9. Security</h2>
+<h2>13. Security</h2>
 <p>
-  Data is kept in the app's private storage inside the TV, which other applications cannot read. The
-  parental PIN is stored as a fingerprint. Note that the security of the connection to your provider
-  (whether it uses HTTPS) depends on that provider.
+  Everything the application sends to our server travels over <strong>HTTPS</strong>. Our database is not
+  reachable from the Internet and the panel requires a username and password. Inside the TV, data lives in
+  the application's private storage, which other applications cannot read, and the parental PIN is stored
+  as a fingerprint. Note that the security of the connection to your IPTV provider (whether it uses HTTPS)
+  depends on that provider.
 </p>
 
-<h2>10. Changes to this policy</h2>
+<h2>14. Changes to this policy</h2>
 <p>
-  Any change will be published here with a new update date. Material changes will also be announced
-  inside the app.
+  Any change will be published here with a new update date. Material changes will also be announced inside
+  the application.
 </p>
 
-<h2>11. Contact</h2>
+<h2>15. Contact</h2>
 <p><a href="mailto:soporte@kratostv.com">soporte@kratostv.com</a></p>
 
 </div>
